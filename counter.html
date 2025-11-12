@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Counter Pengunjung</title>
+<style>
+  body{font-family:Arial,sans-serif;text-align:center;padding:50px}
+  #count{font-size:40px;margin-top:20px}
+</style>
+</head>
+<body>
+  <h1>Counter Pengunjung</h1>
+  <p>Halaman ini sudah dibuka sebanyak:</p>
+  <div id="count"></div>
+
+<script>
+  let hitung = localStorage.getItem("counter") || 0;
+  hitung++;
+  localStorage.setItem("counter", hitung);
+  document.getElementById("count").innerText = hitung + " kali";
+</script>
+</body>
+</html>

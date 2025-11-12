@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Kalender September 2025</title>
+<style>
+  body{font-family: Arial, sans-serif; background:#f7f7f8; padding:20px}
+  h1{text-align:center;margin-bottom:10px}
+  table{width:100%;max-width:500px;margin:auto;border-collapse:collapse;font-size:16px}
+  thead th{padding:8px 0;background:#ddd}
+  td{width:14.285%;height:60px;text-align:right;padding:6px;border:1px solid #ccc}
+  td.weekend{background:#f9f1f1}
+  td.today{background:gold;font-weight:bold}
+</style>
+</head>
+<body>
+  <h1>Kalender November 2025</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Min</th><th>Sen</th><th>Sel</th><th>Rab</th><th>Kam</th><th>Jum</th><th>Sab</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="weekend">1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td class="weekend">7</td></tr>
+      <tr><td class="weekend">8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td class="weekend">14</td></tr>
+      <tr><td class="weekend">15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td class="weekend">21</td></tr>
+      <tr><td class="weekend">22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td class="weekend">28</td></tr>
+      <tr><td class="weekend">29</td><td>30</td><td></td><td></td><td></td><td></td><td class="weekend"></td></tr>
+    </tbody>
+  </table>
+
+<script>
+  // Tandai tanggal hari ini jika bulan = September 2025
+  const today = new Date();
+  if(today.getFullYear()===2025 && today.getMonth()===8){ // bulan 0=Jan, 8=Sep
+    const tds = document.querySelectorAll("td");
+    tds.forEach(td=>{
+      if(td.textContent==today.getDate()) td.classList.add("today");
+    });
+  }
+</script>
+</body>
+</html>
